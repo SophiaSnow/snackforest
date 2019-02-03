@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"-->
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <title>Welcome to snack's forest</title>
+	 <style>
+	 body{
+	   padding-bottom:50px;
+	 }
+  /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  .carousel-caption p{
+      margin-bottom:20px;
+	  font-size:10px;
+	  line-height:1.8;
+	  
+  }
+  .carousel-caption{
+      color:brown;
+  }
+  .carousel{
+      margin-bottom:60px;
+  }
+  
+  #summary-container .col-md-4{
+      text-align:center;
+  }
+  
+  hr.divider{
+      margin:40px 0;
+  }
+  .feature{
+      padding:30px 0;
+  }
+  .feature-heading{
+      font-size:50px;
+	  color:#2a6496;
+	  margin-top:20px;
+  }
+  .feature-heading .text-muted{
+      font-size:28px;
+	  color:#999;
+	  font-family:"游明朝体";
+  }
+  </style>
+  </head>
+  <body>
+	<!--navabar导航条依赖javascript，响应式导航条依赖collapse插件
+	navbar-fixed-top固定在顶部
+	bg-light删除之后background-color可以改变背景颜色
+	-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top" style="background-color:brown">
+  <!--logo-->
+  <a class="navbar-brand" href="#">スナックの森</a>
+  <!--手机页面显示的3条横线，点击它，就会出现下面导航条的具体项目-->
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#demo-navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+   <!--container自适应居中显示-->
+   <div class="collapse navbar-collapse" id="demo-navbar">
+     <!--导航条的具体项目-->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">ホームページ<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">关于</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          展示品
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#tab-food1">虹のキャンディ</a>
+          <a class="dropdown-item" href="#tab-food2">クローバーの謎</a>
+		  <a class="dropdown-item" href="#tab-food3">雪の味</a>
+		  <!--分隔线-->
+          <!--div class="dropdown-divider"></div-->
+          <!--a class="dropdown-item" href="#">Something else here</a-->
+        </div>
+		
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+	<!--form class="form-inline">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form-->
+  </div>
+</nav>
+<div id="demo" class="carousel slide" data-ride="carousel">
+ <!--div id和li data-target和a href一样-->
+  <!-- 指示符，对应着小点点的导航,data-slide-to=0对应着轮播图片中的第一个div-->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+ 
+  <!-- 轮播图片 -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="http://ww1.sinaimg.cn/large/005LbZx3gy1fznsnux5dqj31hc0jsjyi.jpg">
+	  <div class="carousel-caption">
+    <h3>虹のキャンディ</h3>
+    <p>描述文字!</p>
+	<!--p><a class="btn btn-primary" href="#" target="_blank"
+	role="button">詳細</a></p-->
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="http://ww1.sinaimg.cn/large/005LbZx3gy1fznsxpbkmjj31hc0js10o.jpg">
+	  <div class="carousel-caption">
+    <h3>クローバーの謎</h3>
+    <p>描述文字!</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="http://ww1.sinaimg.cn/large/005LbZx3gy1fznsy3d6s7j31hc0jsn9r.jpg">
+	  <div class="carousel-caption">
+    <h3>雪の味</h3>
+    <p>描述文字!</p>
+  </div>
+    </div>
+  </div>
+ 
+  <!-- 左右切换按钮 -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+ 
+</div>
+<div class="container" id="summary-container">
+    <div class="row">
+	    <div class="col-md-4">
+		    <img class="img-circle" src="http://ww1.sinaimg.cn/large/005LbZx3gy1fzsce7hksej303w03wq30.jpg" alt="">
+			<br><br>
+			<h6>雲のお菓子</h6><br>
+			<!--p>食べてみよう。</p-->
+			<p><a class="btn btn-primary btn-sm" href="https://cloudyummy.launchaco.com" target="_blank" role="button">詳細</a></p>
+		</div>
+		<div class="col-md-4"><img class="img-circle" src="http://ww1.sinaimg.cn/large/005LbZx3gy1fznr0at3kgj303w03wweg.jpg" alt="">
+			<br><br>
+			<h6>クローバーの謎</h6><br>
+			<p><a class="btn btn-primary btn-sm" href="#" role="button">詳細</a></p>
+		</div>
+		<div class="col-md-4"><img class="img-circle" src="http://ww1.sinaimg.cn/large/005LbZx3gy1fznr2mw3orj303w03wjrs.jpg" alt="">
+			<br><br>
+			<h6>雪の味</h6><br>
+			<p><a class="btn btn-primary btn-sm" href="#" role="button">詳細</a></p>
+		</div>
+	</div>
+	<hr class="divider">
+
+<!--选项卡切换-->
+<div class="container"><br>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" id="tab-list">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#tab-food1">虹のキャンディ</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#tab-food2">クローバーの謎</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#tab-food3">雪の味</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="tab-food1" class="container tab-pane active"><br>
+	  <div class="row feature">
+		  <div class="col-sm-7">
+			<h2 class="feature-heading">虹のキャンディ<span class="badge badge-pill badge-warning">店長すすめ</span></h2>
+			<pre class="lead">
+
+虹のキャンディを食べて
+
+背伸びをして
+
+空に向かって仰ぐ
+
+虹の架橋が昇っていき
+
+さあ、テンション上げよう
+
+希望を満たされた明日へ
+			</pre>
+		  </div>
+	  <div class="col-sm-5">
+	     <img class="feature-image img-responsive" src="http://ww1.sinaimg.cn/large/005LbZx3gy1fznp8ztkecj30dw0dwgne.jpg" alt="">
+	  </div>
+	  </div>
+    </div>
+    <div id="tab-food2" class="container tab-pane fade"><br>
+	    <div class="row feature">
+		  <div class="col-sm-5">
+			 <img class="feature-image img-responsive" src="http://ww1.sinaimg.cn/large/005LbZx3gy1fznppopmayj30dw0dwq40.jpg" alt="">
+		  </div>
+		  <div class="col-sm-7">
+			<h2 class="feature-heading">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;クローバーの謎<!--span class="text-muted">用户首选</span--><span class="badge badge-pill badge-danger">大人気</span></h2>
+			<pre class="lead">
+        
+		あの時あの場所
+        
+		無邪気な目で
+        
+		お互いに見つめて
+        
+		あのう、クローバーの謎を食べる
+        
+		ええ、美味しい
+        
+		一緒に素晴らしい物事を出会いましょう
+			</pre>
+		  </div>
+		</div>
+    </div>
+    <div id="tab-food3" class="container tab-pane fade"><br>
+	    <div class="row feature">
+		  <div class="col-sm-7">
+			<h2 class="feature-heading">雪の味<span class="badge badge-pill badge-success">新品登場</span>
+			<pre class="lead">
+
+
+真っ白な世界に立ち止まり
+
+静かに雪の音を
+
+聞いて味わいながら
+
+え？お腹すいた
+
+雪の味を食べる
+
+良かったね。ありがとう。
+
+幸せの感じは最高
+			</pre>
+		  </div>
+		  <div class="col-sm-5">
+			 <img class="feature-image img-responsive" src="http://ww1.sinaimg.cn/large/005LbZx3gy1fznq4u7btwj30dw0dwq7l.jpg" alt="">
+		  </div>
+		 </div>
+    </div>
+  </div>
+  
+  <hr class="divider">
+  <footer>
+     <p class="float-right"><a href="#top">トップへ</a></p>
+	 <p>© 2019 snack</p>
+  </footer>
+</div>
+
+
+
+
+
+
+
+<div class="container">
+  <!-- 模态框 -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+   
+        <!-- 模态框头部 -->
+        <div class="modal-header">
+          <h4 class="modal-title">关于</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+   
+        <!-- 模态框主体 -->
+        <div class="modal-body">
+          <p>好好学习，天天向上</p>
+        </div>
+   
+        <!-- 模态框底部 -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">了解了</button>
+        </div>
+   
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+    <!-- Optional JavaScript -->
+	<script>
+	    $(document).ready(function(){
+		    $("#demo-navbar .dropdown-menu a").click(function(){
+			    var href=$(this).attr("href");
+				$("#tab-list a[href='"+href+"']").tab("show");
+			});
+		});
+	</script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script-->
+ 
+  </body>
+</html>
